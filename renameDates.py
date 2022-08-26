@@ -1,4 +1,12 @@
-#! python3
+# Renaming Files with American-Style Dates to European-Style Dates
+
+# This is what we do in the program:
+
+# Create a regex that can identify the text pattern of American-style dates.
+# Call os.listdir() to find all the files in the working directory.
+# Loop over each filename, using the regex to check whether it has a date.
+# If it has a date, rename the file with shutil.move().
+
 
 import shutil,os,re
 datePattern=re.complie(r"""^(.*?)
