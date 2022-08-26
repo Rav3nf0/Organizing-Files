@@ -1,3 +1,5 @@
+# Backing Up a Folder into a ZIP File
+
 import zipfile, os
 
 def backuptoZip(folder):
@@ -7,8 +9,8 @@ def backuptoZip(folder):
     while True:
         zipfilename =os.path.basename(folder+ '-' +str(number) + '-'+'.zip')
         if not os.path.exists(zipfilename):
-
             break
+        
         number =number +1
     print(f'Creating {zipfilename}...')
     backupZip =zipfile.ZipFile(zipfilename, 'w')
